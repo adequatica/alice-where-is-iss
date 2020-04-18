@@ -1,0 +1,22 @@
+{
+  "name": "alice-where-is-iss",
+  "version": "1.0.0",
+  "description": "Serverless skill for Alice",
+  "engines": {
+    "node": ">=12"
+  },
+  "main": "index.js",
+  "scripts": {},
+  "keywords": [
+    "Alice",
+    "Алиса",
+    "skill",
+    "навык",
+    "serverless",
+    "МКС"
+  ],
+  "author": "Andrey Yenin",
+  "license": "ISC",
+  "dependencies": {},
+  "devDependencies": {}
+}
