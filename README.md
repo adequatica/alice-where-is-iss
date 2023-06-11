@@ -1,6 +1,6 @@
 # Where is ISS
 
-Serverless [skill for Alice](https://alice.ya.ru/s/38592329-ff16-41ac-b0b5-605669e888e7) ([virtual assistant](https://en.wikipedia.org/wiki/Alice_(virtual_assistant))) based on Node.js.
+Serverless [skill for Alice](https://dialogs.yandex.ru/store/skills/3b4d3762-gde-mks) ([virtual assistant](https://en.wikipedia.org/wiki/Alice_(virtual_assistant))) based on Node.js.
 
 It informs which area of the earth the international space station is currently flying over.
 
@@ -22,7 +22,7 @@ The deployment occurs via the [Yandex Cloud Functions](https://cloud.yandex.com/
 
 # Где МКС
 
-Бессерверный [навык Алисы](https://alice.ya.ru/s/38592329-ff16-41ac-b0b5-605669e888e7) на Node.js.
+Бессерверный [навык Алисы](https://dialogs.yandex.ru/store/skills/3b4d3762-gde-mks) на Node.js.
 
 Сообщает над какой областью земли сейчас пролетает международная космическая станция.
 
