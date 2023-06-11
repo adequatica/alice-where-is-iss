@@ -1,9 +1,9 @@
 {
   "name": "alice-where-is-iss",
   "version": "1.0.0",
-  "description": "Serverless skill for Alice",
+  "description": "Serverless skill for Alice to answer where is ISS",
   "engines": {
-    "node": ">=12"
+    "node": ">=14"
   },
   "main": "index.js",
   "scripts": {},
@@ -12,7 +12,7 @@
     "Алиса",
     "skill",
     "навык",
-    "serverless",
+    "ISS",
     "МКС"
   ],
   "author": "Andrey Enin <enotramone@gmail.com>",
