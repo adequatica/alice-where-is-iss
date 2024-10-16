@@ -1,14 +1,11 @@
 {
   "name": "alice-where-is-iss",
   "version": "1.0.0",
-  "description": "Serverless skill for Alice to answer where is ISS",
+  "description": "Serverless skill for Alice to answer where is the ISS",
   "keywords": [
     "Alice",
-    "Алиса",
     "skill",
-    "навык",
-    "ISS",
-    "МКС"
+    "ISS"
   ],
   "repository": {
     "type": "git",
@@ -17,7 +14,7 @@
   "author": "Andrey Enin",
   "license": "MIT",
   "engines": {
-    "node": ">=14"
+    "node": ">=18"
   },
   "main": "index.js",
   "dependencies": {},
