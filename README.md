@@ -8,7 +8,7 @@ It informs which area of the earth the International Space Station is currently 
 
 The user says: «_Alice, launch the skill Where is the ISS_».
 
-Alice responds with a welcome skill message: «_The ISS is in orbit. To clarify where it is flying now?_»
+Alice responds with a welcome skill message: «_The ISS is in orbit. Say any phrase to find out where it is flying above the Earth_»
 
 On any following phrase of the user occurs:
 

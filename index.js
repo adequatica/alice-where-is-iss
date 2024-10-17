@@ -118,11 +118,12 @@ module.exports.handler = async (event) => {
   const { request, version, session } = event;
 
   // Skill MUST contain welcome message and help
-  // https://yandex.ru/dev/dialogs/alice/doc/requirements-docpage/#specific__content
-  // "The ISS is in orbit. To clarify where it is flying now?"
-  const textWelcome = "МКС на орбите. Уточнить где сейчас пролетает?";
-  // "To any phrase I will answer what the ISS is flying over"
-  const textHelp = "На любую фразу отвечу над чем пролетает МКС";
+  // https://yandex.ru/dev/dialogs/alice/doc/ru/requirements#greeting
+  // "The ISS is in orbit. Say any phrase to find out where it is flying above the Earth"
+  const textWelcome =
+    "МКС на орбите. Скажите любую фразу, чтобы узнать где она пролетает над землёй";
+  // "To any phrase you will get the answer to where the ISS is flying right now"
+  const textHelp = "На любую фразу вы получите ответ где сейчас пролетает МКС";
 
   // The ways of answers are spied in the skill:
   // https://github.com/tadatuta/alice-songs/blob/master/lib/logic.js
