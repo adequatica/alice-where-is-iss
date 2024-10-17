@@ -1,6 +1,6 @@
 # Where is the ISS
 
-Serverless [skill for Alice](https://dialogs.yandex.com/store/skills/3b4d3762-gde-mks) ([virtual assistant](<https://en.wikipedia.org/wiki/Alice_(virtual_assistant)>)) based on Node.js.
+**Serverless [skill for Alice](https://dialogs.yandex.com/store/skills/3b4d3762-gde-mks)** ([virtual assistant](<https://en.wikipedia.org/wiki/Alice_(virtual_assistant)>)) based on Node.js.
 
 It informs which area of the earth the International Space Station is currently flying over.
 

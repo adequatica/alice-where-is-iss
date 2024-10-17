@@ -16,13 +16,20 @@ const apiGeocode = "https://api.mapbox.com/search/geocode/v6/reverse";
 // https://nodejs.org/api/process.html#process_process_env
 const apiGeocodeKey = process.env.key;
 
+const nullIsland = JSON.parse(
+  '{"iss_position": {"longitude": "0","latitude": "0"}}'
+);
+const pointNemo = JSON.parse('{"features": []}');
+
 // For a serverless application, you need to write API calls on a «pure node» (probably)
 // https://cloud.yandex.com/en/docs/functions/concepts/function
 // To write the response to a variable, helped https://github.com/k03mad, you need to
 // «wrap it in a promise so that you can consistently call it»
+//
+// This function is used only for ISS API requests
 const getHttp = (url) =>
   new Promise((resolve, reject) => {
-    http.get(url, (res) => {
+    const req = http.get(url, (res) => {
       // There is no way to get the request body immediately in the «pure node»
       // https://stackoverflow.com/questions/6968448/where-is-body-in-a-nodejs-http-get-response
       if (res.statusCode === 200) {
@@ -40,17 +47,27 @@ const getHttp = (url) =>
             }
           })
           .on("error", (err) => {
+            // Instead of an error, here returns zero coordinates to prevent a failed skill
+            resolve(nullIsland);
             console.log(`Error: ${err.message}`);
           });
       } else {
+        // Instead of an error, here returns zero coordinates to prevent a failed skill
+        resolve(nullIsland);
         console.log("Error");
       }
     });
+
+    req.setTimeout(2000, () => {
+      // Instead of an error by timeout, here returns zero coordinates to prevent a failed skill
+      resolve(nullIsland);
+    });
   });
 
+// This function is used only for MapBox API requests
 const getHttps = (url) =>
   new Promise((resolve, reject) => {
-    https.get(url, (res) => {
+    const req = https.get(url, (res) => {
       if (res.statusCode === 200) {
         let rawData = "";
         res.on("data", (chunk) => {
@@ -66,11 +83,20 @@ const getHttps = (url) =>
             }
           })
           .on("error", (err) => {
+            // Instead of an error, here returns "nothing was found" to prevent a failed skill
+            resolve(pointNemo);
             console.log(`Error: ${err.message}`);
           });
       } else {
+        // Instead of an error, here returns "nothing was found" to prevent a failed skill
+        resolve(pointNemo);
         console.log("Error");
       }
+    });
+
+    req.setTimeout(2000, () => {
+      // Instead of an error by timeout, here returns "nothing was found" to prevent a failed skill
+      resolve(pointNemo);
     });
   });
 
